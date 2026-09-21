@@ -6,12 +6,19 @@
 <div class="flex flex-col justify-center items-center min-h-screen bg-slate-700 w-full h-full  pt-5 ">
 <ul class="font-extrabold text-3xl">
   @for (book of books; track book.id) {
-   
-    <li class="pb-8 cursor-pointer hover:text-green-300 hover: font-sans transition-all duration-500">
-      <a [routerLink]="['/books', book.id]">
+   <div class="bg-slate-50  mb-3 h-48 rounded-md shadow-lg shadow-emerald-400">
+    <li class="pb-8 cursor-pointer hover:text-emerald-700 hover: font-sans transition-all duration-500">
+  
         {{ book.title }} - {{ book.author }}
-      </a>
+      
     </li>
+    <button class="border-solid  bg-zinc-500 rounded-md shadow-xl r w-5/6 ml-10 mt-10">
+      <a class=" hover:text-emerald-700 transition-colors duration-500"  [routerLink]="['/books', book.id]">
+       
+       View Page
+      </a>
+     </button>
+    </div>
   }
 </ul>
 </div>
