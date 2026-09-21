@@ -6,11 +6,25 @@
 
 
 @if (book) {
-    <div class="flex flex-col justify-center items-center min-h-screen bg-slate-700 w-full h-full font-bold text-3xl pt-5 ">
-  <h2 class="pb-8 cursor-pointer hover:text-green-300 hover: font-sans transition-all duration-500">{{ book.title }}</h2>
-  <p class="pb-8 cursor-pointer hover:text-green-300 hover: font-sans transition-all duration-500">Author: {{ book.author }}</p>
+   <div class="bg-slate-700 w-full min-h-screen flex justify-center items-center"> 
+    <div class="flex flex-col justify-center items-center w-1/4 bg-white rounded-md shadow-lg shadow-emerald-400 font-bold text-3xl pt-5"> 
+        
+        <h2 class="pb-8 cursor-pointer transition-all duration-500">
+            {{ book.title }}
+        </h2> 
 
- <button class="cursor-pointer bg-zinc-500 rounded-md shadow-xl hover:text-green-300 hover: font-sans transition-all duration-500" routerLink="/books">Back to Books</button>
-  
+        <p class="pb-8 cursor-pointer transition-all duration-500">
+            Author: {{ book.author }}
+        </p> 
+ 
+        <button 
+            class="cursor-pointer bg-zinc-500 rounded-md shadow-xl hover:text-emerald-700 font-sans transition-all duration-500"
+            routerLink="/books">
+            Back to Books
+        </button> 
+   
+    </div> 
 </div>
+
+
 }
