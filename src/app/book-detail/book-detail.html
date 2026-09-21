@@ -1,0 +1,15 @@
+<div class="flex w-full bg-slate-900 justify-between">
+    <h1 class="font-mono font-bold text-3xl text-green-300  hover:text-red-400 transition-colors duration-500">Book Details</h1>
+    <h1 routerLink="/books" class="font-mono font-bold text-3xl  text-green-300 hover:text-red-400 transition-colors duration-500" >Home</h1>
+</div>
+
+
+
+@if (book) {
+    <div class="flex flex-col justify-center items-center min-h-screen bg-slate-700 w-full h-full font-bold text-3xl pt-5 ">
+  <h2 class="pb-8 cursor-pointer hover:text-green-300 hover: font-sans transition-all duration-500">{{ book.title }}</h2>
+  <p class="pb-8 cursor-pointer hover:text-green-300 hover: font-sans transition-all duration-500">Author: {{ book.author }}</p>
+
+  <a class="pb-8 cursor-pointer hover:text-green-300 hover: font-sans transition-all duration-500" routerLink="/books">Back to Books</a>
+  </div>
+}
